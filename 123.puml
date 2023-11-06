@@ -1,0 +1,57 @@
+@startuml paper
+skin rose
+
+title Paper Plan - 2023/10/28
+
+start
+
+#Green/White:Ptolemy Model<
+skinparam {
+    GroupBackgroundColor<<代码生成>> #FFC0CB
+}
+
+partition #FFAA00 代码生成 {
+:解析模型;
+:模型预处理(提取额外信息);
+:生成组件模板;
+partition #GreenYellow 选做 {
+:生成中间代码;
+:对中间代码优化;
+}
+
+:翻译中间代码，生成框架代码;
+}
+
+#Red:AST>
+
+:E-SSA;
+
+note left
+转为静态单赋值
+才能转换为SMT脚本。
+----
+静态单赋值的算法会保密，
+可以说是//有论文支撑//
+可以自动化转换
+=====
+但是实际上<b>手动</b>转转得了
+end note
+
+:SMT>
+
+:Z3/
+
+note left
+实际上对求解器有包装，
+比如要调度要并行等。
+====
+但我<b>直接丢给Z3</b>也是可以的。
+end note
+
+-[#BlueViolet]->
+
+#White/GreenYellow:验证报告HTML>
+
+stop
+
+@enduml
