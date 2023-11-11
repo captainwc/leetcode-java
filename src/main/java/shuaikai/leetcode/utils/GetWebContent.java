@@ -6,8 +6,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.jsoup.Jsoup;
-
 public class GetWebContent {
     public static void main(String[] args) {
         String url = "https://pyxt.ustc.edu.cn/?menu=public_replay";
@@ -37,8 +35,7 @@ public class GetWebContent {
 
             String webContent = response.toString();
 
-            // 解析
-            Jsoup.parse(webContent);
+            System.out.println(webContent);
 
         } catch (IOException e) {
             e.printStackTrace();
