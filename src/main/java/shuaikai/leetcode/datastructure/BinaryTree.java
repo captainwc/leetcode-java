@@ -33,7 +33,7 @@ public abstract class BinaryTree {
                 pNode = pNode.leftChild;
             } else {
                 pNode = st.pop();
-                builder.append(String.valueOf(pNode.val) + ",");
+                builder.append(pNode.val).append(",");
                 pNode = pNode.rightChild;
             }
         }
