@@ -1,4 +1,4 @@
-package shuaikai.leetcode.datastructure;
+package shuaikai.datastructure.list;
 
 public class ListNode {
     public int val;

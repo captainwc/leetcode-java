@@ -1,4 +1,4 @@
-package shuaikai.leetcode.datastructure;
+package shuaikai.datastructure.tree;
 
 import java.util.Stack;
 

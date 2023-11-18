@@ -1,4 +1,4 @@
-package shuaikai.leetcode.linearlist;
+package shuaikai.lcproblems.linearlist;
 
 public class SearchInsertPos35 {
 

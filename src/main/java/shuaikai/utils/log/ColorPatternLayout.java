@@ -1,4 +1,4 @@
-package shuaikai.log;
+package shuaikai.utils.log;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.PatternLayout;

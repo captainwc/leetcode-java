@@ -1,4 +1,4 @@
-package shuaikai.leetcode.utils;
+package shuaikai.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;

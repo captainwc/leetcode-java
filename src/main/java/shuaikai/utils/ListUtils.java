@@ -1,4 +1,4 @@
-package shuaikai.leetcode.utils;
+package shuaikai.utils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,13 +7,13 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import shuaikai.leetcode.datastructure.ListNode;
+import shuaikai.datastructure.list.ListNode;
 
 public class ListUtils {
     public static final Logger LOGGER = LoggerFactory.getLogger(ListUtils.class);
 
     public static ListNode getList(String str) {
-        List<Integer> nums = Arrays.asList(str.split(",")).stream().map(x -> Integer.parseInt(x))
+        List<Integer> nums = Arrays.stream(str.split(",")).map(Integer::parseInt)
                 .collect(Collectors.toList());
         ListNode head = new ListNode(nums.get(0));
         ListNode p = head;
@@ -28,10 +28,10 @@ public class ListUtils {
         StringBuilder builder = new StringBuilder().append("[");
         ListNode p = head;
         while (p.next != null) {
-            builder.append(String.valueOf(p.val)).append(",");
+            builder.append(p.val).append(",");
             p = p.next;
         }
-        builder.append(String.valueOf(p.val)).append("]");
+        builder.append(p.val).append("]");
         return builder.toString();
     }
 

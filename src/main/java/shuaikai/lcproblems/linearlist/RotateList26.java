@@ -1,9 +1,9 @@
-package shuaikai.leetcode.linearlist;
+package shuaikai.lcproblems.linearlist;
 
 import java.util.ArrayList;
 import java.util.List;
-import shuaikai.leetcode.datastructure.ListNode;
-import shuaikai.leetcode.utils.ListUtils;
+import shuaikai.datastructure.list.ListNode;
+import shuaikai.utils.ListUtils;
 
 public class RotateList26 {
 

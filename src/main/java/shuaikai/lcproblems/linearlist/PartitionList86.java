@@ -1,7 +1,7 @@
-package shuaikai.leetcode.linearlist;
+package shuaikai.lcproblems.linearlist;
 
-import shuaikai.leetcode.datastructure.ListNode;
-import shuaikai.leetcode.utils.ListUtils;
+import shuaikai.datastructure.list.ListNode;
+import shuaikai.utils.ListUtils;
 
 public class PartitionList86 {
     public static ListNode partition(ListNode head, int x) {
