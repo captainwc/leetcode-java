@@ -1,4 +1,4 @@
-package shuaikai.leetcode.datastructure;
+package shuaikai.datastructure.tree;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

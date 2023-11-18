@@ -2,6 +2,8 @@ package shuaikai.leetcode.datastructure;
 
 import org.junit.Assert;
 import org.junit.Test;
+import shuaikai.datastructure.tree.BST;
+import shuaikai.datastructure.tree.TreeNode;
 
 public class TreeTest {
     @Test
