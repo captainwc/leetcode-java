@@ -3,12 +3,13 @@ package shuaikai.datastructure.tree;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-enum COLOR {
-    RED,
-    BLACK
-}
 
-public class TreeNode {
+public class TreeNode implements Comparable<TreeNode> {
+    public enum COLOR {
+        RED,
+        BLACK
+    }
+
     public int val;
     public TreeNode leftChild;
     public TreeNode rightChild;
@@ -79,10 +80,17 @@ public class TreeNode {
         }
     }
 
-    // only change the content, won't change the position.
+    /**
+     * Only change the content, won't change the position.
+     */
     public void changeMe(TreeNode node) {
         this.val = node.val;
         this.color = node.color;
+    }
+
+    @Override
+    public int compareTo(TreeNode o) {
+        return this.val - o.val;
     }
 
     @Override
