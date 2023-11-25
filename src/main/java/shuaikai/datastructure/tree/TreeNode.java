@@ -3,11 +3,9 @@ package shuaikai.datastructure.tree;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class TreeNode implements Comparable<TreeNode> {
     public enum COLOR {
-        RED,
-        BLACK
+        RED, BLACK
     }
 
     public int val;
@@ -97,17 +95,19 @@ public class TreeNode implements Comparable<TreeNode> {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("(");
-        if (leftChild != null)
-            builder.append(leftChild.toString());
-        else
+        if (leftChild != null) {
+            builder.append(leftChild);
+        } else {
             builder.append("null");
+        }
         builder.append(",");
-        builder.append(String.valueOf(val));
+        builder.append(val);
         builder.append(",");
-        if (rightChild != null)
-            builder.append(rightChild.toString());
-        else
+        if (rightChild != null) {
+            builder.append(rightChild);
+        } else {
             builder.append("null");
+        }
         builder.append(")");
         return builder.toString();
     }

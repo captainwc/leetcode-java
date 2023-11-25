@@ -1,5 +1,10 @@
 package shuaikai.utils.exception;
 
+/**
+ * Factory to gen LC*Exception
+ *
+ * @author shuaikai
+ */
 public class LCExceptionFactory {
     public static LCRuntimeException genRuntimeException(String msg) {
         return genRuntimeException(msg, Problem.Severity.ERROR);
