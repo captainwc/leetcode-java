@@ -48,7 +48,7 @@ public class GptHelper {
 
         MediaType mediaType = MediaType.parse("application/json");
 
-        RequestBody body = RequestBody.create(mediaType, new Gson().toJson(requestBody));
+        RequestBody body = RequestBody.create(mediaType, requestBody.toString());
         Request request = new Request.Builder().url(url)
                 .post(body)
                 .addHeader("Content-Type", "application/json")

@@ -3,6 +3,8 @@ package shuaikai.datastructure.tree;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
 public class BST extends BinaryTree {
     public static final Logger LOGGER = LoggerFactory.getLogger(BST.class);
 
@@ -44,7 +46,7 @@ public class BST extends BinaryTree {
             }
         }
         TreeNode node = new TreeNode(val, pre);
-        if (pre.val > val) {
+        if (Objects.requireNonNull(pre).val > val) {
             pre.leftChild = node;
         } else {
             pre.rightChild = node;
@@ -53,7 +55,7 @@ public class BST extends BinaryTree {
         return true;
     }
 
-    // streamy operation
+    // stream operation
     public BST insertS(int val) {
         if (!insert(val)) {
             LOGGER.trace("BST InsertS error: Value {} exits!", val);
