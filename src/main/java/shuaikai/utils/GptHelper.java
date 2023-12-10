@@ -87,5 +87,4 @@ public class GptHelper {
                         .buildArray())
                 .buildObj();
     }
-
 }
