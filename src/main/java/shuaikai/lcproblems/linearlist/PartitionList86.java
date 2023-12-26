@@ -3,6 +3,10 @@ package shuaikai.lcproblems.linearlist;
 import shuaikai.datastructure.list.ListNode;
 import shuaikai.utils.ListUtils;
 
+/**
+ * @author shuaikai
+ * @since 2023/12/16
+ */
 public class PartitionList86 {
     public static ListNode partition(ListNode head, int x) {
         ListNode dummy = new ListNode();
